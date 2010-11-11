@@ -1,0 +1,65 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A471846-7E19-4E6A-94BA-6133AFDBFD59}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>libpyrite</RootNamespace>
+    <AssemblyName>libpyrite</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="windows\pinvoke\AdvAPI32.cs" />
+    <Compile Include="windows\security\ACCESS_MASK.cs" />
+    <Compile Include="windows\security\ACL_INFORMATION_CLASS.cs" />
+    <Compile Include="windows\security\SECURITY_INFORMATION.cs" />
+    <Compile Include="windows\security\SE_OBJECT_TYPE.cs" />
+    <Compile Include="windows\security\SID_NAME_USE.cs" />
+    <Compile Include="windows\security\_ACCESS_ALLOWED_ACE.cs" />
+    <Compile Include="windows\security\_ACE_HEADER.cs" />
+    <Compile Include="windows\security\_ACL.cs" />
+    <Compile Include="windows\security\_ACL_REVISION_INFORMATION.cs" />
+    <Compile Include="windows\security\_ACL_SIZE_INFORMATION.cs" />
+    <Compile Include="windows\security\_SECURITY_ATTRIBUTE.cs" />
+    <Compile Include="windows\security\_SECURITY_DESCRIPTOR.cs" />
+    <Compile Include="windows\security\_SID.cs" />
+    <Compile Include="windows\security\_SID_IDENTIFIER_AUTHORITY.cs" />
+    <Compile Include="windows\services\SERVICE_CONTROLS_ACCEPT.cs" />
+    <Compile Include="windows\services\SERVICE_STATE.cs" />
+    <Compile Include="windows\services\SERVICE_STATUS.cs" />
+    <Compile Include="windows\services\SERVICE_TYPE.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
